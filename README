@@ -1,0 +1,7 @@
+1) To Create RPM of Liquidio-compute-service, Run
+      python setup.py  bdist_rpm
+2) After step 1, two directories are created, build and dist.
+      cd dist
+3) Copy liquidio-compute-service-1.0-1.noarch.rpm to undercloud node 
+
+4) Install the rpm in the overcloud image

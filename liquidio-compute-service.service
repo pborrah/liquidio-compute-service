@@ -1,0 +1,16 @@
+[Unit]
+Description=LiquidIO Compute service
+After=syslog.target network.target network.service 
+PartOf=network.service
+
+[Service]
+Type=simple
+PermissionsStartOnly=true
+ExecStart=/usr/bin/liquidio-compute --log-file /var/log/liquidio-compute.log
+PrivateTmp=true
+KillMode=process
+Restart=on-failure
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
